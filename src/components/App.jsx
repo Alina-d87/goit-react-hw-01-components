@@ -1,9 +1,16 @@
 import { Profile } from "components/Profile.jsx";
+import user from "..//user.json";
 
 export const App = () => {
   return (
     <div>
-   <Profile />
+<Profile
+  username={user.username}
+  tag={user.tag}
+  location={user.location}
+  avatar={user.avatar}
+  stats={user.stats}
+/>
     </div>
   );
 };
@@ -13,17 +20,6 @@ export const App = () => {
 //location — місто і країна
 //avatar — посилання на зображення
 //stats — об'єкт з інформацією про активності
-
-
-
-//<Profile
-//  username={user.username}
-//  tag={user.tag}
-//  location={user.location}
-//  avatar={user.avatar}
-//  stats={user.stats}
-///>
-
 
 
 // <div
