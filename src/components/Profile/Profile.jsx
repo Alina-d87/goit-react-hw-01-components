@@ -1,10 +1,10 @@
-import user from "..//user.json";
+//import user from "../../user.json";
 import PropTypes from 'prop-types';
 import { BiAt } from "react-icons/bi";
-import { Tag } from "components/ProfileTag.jsx";
+import { Tag } from "components/Profile/ProfileTag.jsx";
 
-const profileUser = user;
-console.log(profileUser);
+//const profileUser = user;
+//console.log(profileUser);
 
 export const Profile = ({username, tag, location, avatar, stats}) => {
 	//const {username, tag, location, avatar, stats} = props;

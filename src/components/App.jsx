@@ -1,5 +1,9 @@
-import { Profile } from "components/Profile.jsx";
+import { Profile } from "components/Profile/Profile.jsx";
 import user from "..//user.json";
+import { Statistics } from "components/Statistics/Statistics.jsx";
+import data from '..//data.json';
+import { FriendList } from "./FriendList";
+import friends from "..//friends.json";
 
 export const App = () => {
   return (
@@ -11,15 +15,17 @@ export const App = () => {
   avatar={user.avatar}
   stats={user.stats}
 />
+    <section>
+        <Statistics title="Upload stats" stats={data.title} />
+        <Statistics statsLabel={data.label}
+          statsPercentage={data.percentage} />
+      </section>
+      <ul>
+       <FriendList friends={friends} />;
+      </ul>
     </div>
   );
 };
-
-//username — ім'я користувача
-//tag — тег в соціальній мережі без @
-//location — місто і країна
-//avatar — посилання на зображення
-//stats — об'єкт з інформацією про активності
 
 
 // <div
