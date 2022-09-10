@@ -2,8 +2,10 @@ import { Profile } from "components/Profile/Profile.jsx";
 import user from "..//user.json";
 import { Statistics } from "components/Statistics/Statistics.jsx";
 import data from '..//data.json';
-import { FriendList } from "./FriendList";
+import { FriendList } from "./FriendList/FriendList";
 import friends from "..//friends.json";
+import {TransactionHistory} from "./TransitionHistory/TransactionHistory"
+import transactions from "..//transactions.json";
 
 export const App = () => {
   return (
@@ -16,27 +18,12 @@ export const App = () => {
   stats={user.stats}
 />
     <section>
-        <Statistics title="Upload stats" stats={data.title} />
-        <Statistics statsLabel={data.label}
-          statsPercentage={data.percentage} />
+        <Statistics stats={data} />
       </section>
       <ul>
-       <FriendList friends={friends} />;
+       <FriendList friends={friends} />
       </ul>
+        <TransactionHistory items={transactions} />
     </div>
   );
 };
-
-
-// <div
-//      style={{
-//        height: '100vh',
-//        display: 'flex',
-//        justifyContent: 'center',
-//        alignItems: 'center',
-//        fontSize: 40,
-//        color: '#010101'
-//      }}
-//    >
-//      React homework template
-//    </div>

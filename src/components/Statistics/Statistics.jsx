@@ -1,35 +1,20 @@
-//import data from '../../data.json';
 import PropTypes from 'prop-types';
-
-//const statistics = data;
-//console.log(statistics);
+import { StatisticsTitle } from "./StatisticsTitle"
 
 //список зарендерити через map
 //title – не обов'язковий, і якщо він не переданий, не повинна рендеритись розмітка заголовка <h2>.
 
-export const Statistics = ({ title = " ", statsLabel, statsPercentage }) => {
+export const Statistics = ({title, stats}) => {
   return (
 	<section className="statistic">
-		<h2 className="title">{title}</h2>
-
-  <ul className="stat-list">
-    <li className="item">
-				<span className="label">{statsLabel}</span>
-      <span className="percentage">{statsPercentage}</span>
-    </li>
-    <li className="item">
-      <span className="label">{statsLabel}</span>
-      <span className="percentage">{statsPercentage}</span>
-    </li>
-    <li className="item">
-      <span className="label">{statsLabel}</span>
-      <span className="percentage">{statsPercentage}</span>
-    </li>
-    <li className="item">
-      <span className="label">{statsLabel}</span>
-      <span className="percentage">{statsPercentage}</span>
-    </li>
-  </ul>
+		  <StatisticsTitle title={title} />
+		  <ul className="stat-list">
+      {stats.map(({id, label, percentage}) =>
+		  <li key={id} className="item">
+            <span className="label">{label}</span>
+            <span className="percentage"> {percentage}</span>
+		  </li>)}
+			  </ul>
 </section>)
 }
 
