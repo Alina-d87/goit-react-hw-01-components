@@ -1,13 +1,22 @@
 import PropTypes from 'prop-types';
+import { FaCircle } from "react-icons/fa"
+import { Friends } from "./FriendList.styled"
+import { OneFriends } from "./FriendList.styled"
+import { StatusFriend } from "./FriendList.styled"
+import { OnlineFriend } from "./FriendOnline"
+import { AvatarFriend  } from "./FriendList.styled"
+import { NameFriend } from "./FriendList.styled"
+
 
 export const FriendList = ({ friends }) => {
-  return (friends.map(({ avatar, name, isOnline, id }) => 
-    <li key={id} className="item">
-      <span className="status">{ isOnline }</span>
-  <img className="avatar" src={avatar} alt="User avatar" width="48" />
-      <p className="name">{name}</p>
-</li>
-  ))
+  return (<Friends>
+    {friends.map(({ avatar, name, isOnline, id, icon }) =>
+      <OneFriends key={id}>
+        <StatusFriend><OnlineFriend icon={FaCircle} isOnline={isOnline} /></StatusFriend>
+        <AvatarFriend  src={avatar} alt="User avatar" width="48" />
+        <NameFriend>{name}</NameFriend>
+      </OneFriends>)}
+  </Friends>)
 }
 
 FriendList.prototypes = {

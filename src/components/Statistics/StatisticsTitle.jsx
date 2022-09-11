@@ -1,8 +1,11 @@
 import PropTypes from 'prop-types';
+import { HeadStatistic } from "./Statistics.styled"
 
 export const StatisticsTitle = ({ title = "Upload stats" }) => {
 	const isTitle = true;
-	return (<h2 className="title">{isTitle && title}</h2>)
+	return (<HeadStatistic>
+		{isTitle && title}
+	</HeadStatistic>)
 }
 
 StatisticsTitle.prototype = {

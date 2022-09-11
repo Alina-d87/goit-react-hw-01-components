@@ -1,36 +1,41 @@
 import PropTypes from 'prop-types';
 import { BiAt } from "react-icons/bi";
 import { Tag } from "components/Profile/ProfileTag.jsx";
-
+import { ProfileCard } from "./Profile.styled"
+import { Avatar } from "./Profile.styled"
+import { UserName } from "./Profile.styled"
+import { UserInfo } from "./Profile.styled"
+import { ActivInfo } from "./Profile.styled"
+import { ActivLabel } from "./Profile.styled"
+import { ActiveQuantity} from "./Profile.styled"
 
 export const Profile = ({username, tag, location, avatar, stats}) => {
-	return (<div className="profile">
-			<div className="description">
-				<img
+	return (<ProfileCard>
+		<div className="description">
+				<Avatar
 					src={avatar}
 					alt={username}
-					className="avatar"
 				/>
-				<p className="name">{username}</p>
+				<UserName>{username}</UserName>
 				<Tag tag={tag} icon={BiAt} />
-				<p className="location">{location}</p>
+				<UserInfo>{location}</UserInfo>
 			</div>
 
-			<ul className="stats">
+			<ActivInfo>
 				<li>
-					<span className="label">Followers</span>
-					<span className="quantity"> {stats.followers}</span>
+					<ActivLabel>Followers</ActivLabel>
+					<ActiveQuantity>{stats.followers}</ActiveQuantity>
 				</li>
 				<li>
-					<span className="label">Views</span>
-					<span className="quantity"> {stats.views}</span>
+					<ActivLabel>Views</ActivLabel>
+					<ActiveQuantity>{stats.views}</ActiveQuantity>
 				</li>
 				<li>
-					<span className="label">Likes</span>
-					<span className="quantity"> {stats.likes}</span>
+					<ActivLabel>Likes</ActivLabel>
+					<ActiveQuantity>{stats.likes}</ActiveQuantity>
 				</li>
-			</ul>
-		</div>
+			</ActivInfo>
+		</ProfileCard>
 	);
 };
 

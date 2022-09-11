@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
+import { UserInfo } from "./Profile.styled"
 
 export const Tag = ({ icon: Icon, tag }) => {
 	return (
-			<p className="tag">
-		<Icon /> {tag}
-			</p>)
+			<UserInfo>
+		<Icon />{tag}
+			</UserInfo>)
 }
 
 Tag.prototype = {

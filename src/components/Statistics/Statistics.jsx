@@ -1,21 +1,23 @@
 import PropTypes from 'prop-types';
 import { StatisticsTitle } from "./StatisticsTitle"
-
-//список зарендерити через map
-//title – не обов'язковий, і якщо він не переданий, не повинна рендеритись розмітка заголовка <h2>.
+import { StatisticsSection } from "./Statistics.styled"
+import { ListStatistics } from "./Statistics.styled"
+import { StaticsLabel } from "./Statistics.styled"
+import { StaticsPercentage } from "./Statistics.styled"
+import {ItemStatics} from "./Statistics.styled"
 
 export const Statistics = ({title, stats}) => {
   return (
-	<section className="statistic">
+	<StatisticsSection>
 		  <StatisticsTitle title={title} />
-		  <ul className="stat-list">
+		  <ListStatistics>
       {stats.map(({id, label, percentage}) =>
-		  <li key={id} className="item">
-            <span className="label">{label}</span>
-            <span className="percentage"> {percentage}</span>
-		  </li>)}
-			  </ul>
-</section>)
+		  <ItemStatics key={id}>
+            <StaticsLabel>{label}</StaticsLabel>
+            <StaticsPercentage>{percentage}%</StaticsPercentage>
+		  </ItemStatics>)}
+			  </ListStatistics>
+</StatisticsSection>)
 }
 
 Statistics.prototype = {
