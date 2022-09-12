@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
-import { StatusFriend } from "./FriendList.styled"
+import { StatusFriend, GreenFriend, RedFriend } from "./FriendList.styled"
 
 export const OnlineFriend = ({ icon: Icon, isOnline }) => {
 	return (
 		<StatusFriend>
-			<Icon />{isOnline} 
+			{isOnline ? <GreenFriend><Icon /></GreenFriend> : <RedFriend><Icon /></RedFriend>} 
 		</StatusFriend>
 	)
 }

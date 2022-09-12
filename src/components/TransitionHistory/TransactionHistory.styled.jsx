@@ -17,6 +17,8 @@ border: 2px solid grey;
 export const StringTransaction = styled.tr`
 height: 40px;
 font-size: 20px;
-text-align: center;
 border: 2px solid grey;
 `
+export const DataTable = styled.td`
+padding-left: 10px;
+text-aling: left;`

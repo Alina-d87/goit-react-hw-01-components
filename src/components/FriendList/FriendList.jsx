@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { FaCircle } from "react-icons/fa"
+import { BlockFriends } from "./FriendList.styled"
 import { Friends } from "./FriendList.styled"
 import { OneFriends } from "./FriendList.styled"
 import { StatusFriend } from "./FriendList.styled"
@@ -9,14 +10,16 @@ import { NameFriend } from "./FriendList.styled"
 
 
 export const FriendList = ({ friends }) => {
-  return (<Friends>
+  return (<BlockFriends>
+    <Friends>
     {friends.map(({ avatar, name, isOnline, id, icon }) =>
       <OneFriends key={id}>
         <StatusFriend><OnlineFriend icon={FaCircle} isOnline={isOnline} /></StatusFriend>
         <AvatarFriend  src={avatar} alt="User avatar" width="48" />
         <NameFriend>{name}</NameFriend>
       </OneFriends>)}
-  </Friends>)
+    </Friends>
+    </BlockFriends>)
 }
 
 FriendList.prototypes = {

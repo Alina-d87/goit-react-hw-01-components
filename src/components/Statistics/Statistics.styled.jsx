@@ -33,5 +33,3 @@ export const StaticsPercentage = styled.span`
 text-align: center;
 font-size: 20px;
 `
-//Колір фону елемента статистики в оформленні можна пропустити або створити функцію для генерації випадкового кольору.
-////display: inline-block; display: block;
