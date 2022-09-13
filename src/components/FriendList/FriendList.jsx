@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import { FaCircle } from "react-icons/fa"
+import { OnlineFriend } from "./FriendOnline"
 import { BlockFriends } from "./FriendList.styled"
 import { Friends } from "./FriendList.styled"
 import { OneFriends } from "./FriendList.styled"
 import { StatusFriend } from "./FriendList.styled"
-import { OnlineFriend } from "./FriendOnline"
 import { AvatarFriend  } from "./FriendList.styled"
 import { NameFriend } from "./FriendList.styled"
 
