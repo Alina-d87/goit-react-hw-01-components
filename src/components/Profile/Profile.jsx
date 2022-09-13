@@ -5,6 +5,7 @@ import { ProfileCard } from "./Profile.styled"
 import { Avatar } from "./Profile.styled"
 import { UserName } from "./Profile.styled"
 import { UserInfo } from "./Profile.styled"
+import { ElementInvo } from "./Profile.styled"
 import { ActivInfo } from "./Profile.styled"
 import { ActivLabel } from "./Profile.styled"
 import { ActiveQuantity} from "./Profile.styled"
@@ -22,18 +23,18 @@ export const Profile = ({username, tag, location, avatar, stats}) => {
 			</div>
 
 			<ActivInfo>
-				<li>
+				<ElementInvo>
 					<ActivLabel>Followers</ActivLabel>
 					<ActiveQuantity>{stats.followers}</ActiveQuantity>
-				</li>
-				<li>
+				</ElementInvo>
+				<ElementInvo>
 					<ActivLabel>Views</ActivLabel>
 					<ActiveQuantity>{stats.views}</ActiveQuantity>
-				</li>
-				<li>
+				</ElementInvo>
+				<ElementInvo>
 					<ActivLabel>Likes</ActivLabel>
 					<ActiveQuantity>{stats.likes}</ActiveQuantity>
-				</li>
+				</ElementInvo>
 			</ActivInfo>
 		</ProfileCard>
 	);

@@ -20,23 +20,18 @@ height: 100px;
 width: 400px;
 border: 1px solid blue;
 margin-bottom: 20px;
-
 gap: 15px;
 `
 export const StatusFriend = styled.span`
+display: block;
 margin-left: 15px;
+margin: 20px 10px 0 15px;
 `
-export const GreenFriend = styled.span`
-color: green;
-justify-content: center;
-`
-export const RedFriend = styled.span`
-color: red;
-justify-content: center;`
 
 export const AvatarFriend = styled.img`
 justify-content: center;
 width: 100px;
+margin: 0 30px 0 15px;
 `
 export const NameFriend = styled.p`
 justify-content: center;

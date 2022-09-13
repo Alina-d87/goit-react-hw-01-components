@@ -5,8 +5,7 @@ margin: auto;
 display: inline;
 justify-content: center;
 text-align: center;
-height: 60px;
-width: 400px;
+height: 80px;
 `
 
 export const HeadStatistic = styled.h2`
@@ -16,11 +15,19 @@ text-align: center;`
 export const ListStatistics = styled.ul`
 list-style: none;
 display: flex;
-gap: 20px;
-justify-content: center;`
+padding-left: 0px;
+margin: 0;
+height: 50px;
+`
 
 export const ItemStatics = styled.li`
-text-align: center;`
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
+background-color: lightBlue;
+border: 1px solid grey;
+`
 
 export const StaticsLabel = styled.span`
 display: block;

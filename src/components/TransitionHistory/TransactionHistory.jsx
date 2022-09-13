@@ -3,23 +3,24 @@ import { TransactionTable } from "./TransactionHistory.styled"
 import { TransactionHead } from "./TransactionHistory.styled"
 import { StringTransaction } from "./TransactionHistory.styled"
 import { DataTable } from "./TransactionHistory.styled"
+import {HeadTable} from "./TransactionHistory.styled"
 
 export const TransactionHistory = ({ items }) => {
   return (
     <TransactionTable>
       <TransactionHead>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <HeadTable>Type</HeadTable>
+          <HeadTable>Amount</HeadTable>
+          <HeadTable>Currency</HeadTable>
         </tr>
       </TransactionHead>
       <tbody>
-      {items.map(({ id, type, amount, currency }) =>
+        {items.map(({ id, type, amount, currency }) =>
           <StringTransaction key={id}>
             <DataTable key={type}>{type}</DataTable>
             <DataTable key={amount}>{amount}</DataTable>
-            <DataTable key={currency}>{currency}r</DataTable>
+            <DataTable key={currency}>{currency}</DataTable>
           </StringTransaction>
         )}
         </tbody>

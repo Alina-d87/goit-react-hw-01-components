@@ -12,7 +12,7 @@ export const Statistics = ({title, stats}) => {
 		  <StatisticsTitle title={title} />
 		  <ListStatistics>
       {stats.map(({id, label, percentage}) =>
-		  <ItemStatics key={id}>
+		  <ItemStatics key={id} style={{ backgroundColor: getRandomHexColor() }}>
             <StaticsLabel>{label}</StaticsLabel>
             <StaticsPercentage>{percentage}%</StaticsPercentage>
 		  </ItemStatics>)}
@@ -26,4 +26,8 @@ Statistics.prototype = {
 		label: PropTypes.string.isRequired,
 		percentage: PropTypes.number.isRequired
 	})
+}
+
+const getRandomHexColor = () => {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
