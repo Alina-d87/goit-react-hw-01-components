@@ -15,8 +15,7 @@ export const Profile = ({username, tag, location, avatar, stats}) => {
 		<div className="description">
 				<Avatar
 					src={avatar}
-					alt={username}
-				/>
+					alt={username} />
 				<UserName>{username}</UserName>
 				<Tag tag={tag} icon={BiAt} />
 				<UserInfo>{location}</UserInfo>

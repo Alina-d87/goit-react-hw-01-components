@@ -12,7 +12,7 @@ export const Statistics = ({title, stats}) => {
 		  <StatisticsTitle title={title} />
 		  <ListStatistics>
       {stats.map(({id, label, percentage}) =>
-		  <ItemStatics key={id} style={{ backgroundColor: getRandomHexColor() }}>
+		  <ItemStatics key={id} style={{ backgroundColor: getRandomHexColor()}}>
             <StaticsLabel>{label}</StaticsLabel>
             <StaticsPercentage>{percentage}%</StaticsPercentage>
 		  </ItemStatics>)}

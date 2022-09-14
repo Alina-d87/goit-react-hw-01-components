@@ -14,7 +14,9 @@ export const FriendList = ({ friends }) => {
     <Friends>
     {friends.map(({ avatar, name, isOnline, id, icon }) =>
       <OneFriends key={id}>
-        <StatusFriend><OnlineFriend icon={FaCircle} isOnline={isOnline} /></StatusFriend>
+        <StatusFriend>
+          <OnlineFriend icon={FaCircle} isOnline={isOnline} />
+        </StatusFriend>
         <AvatarFriend  src={avatar} alt="User avatar" width="48" />
         <NameFriend>{name}</NameFriend>
       </OneFriends>)}

@@ -21,8 +21,7 @@ export const TransactionHistory = ({ items }) => {
             <DataTable key={type}>{type}</DataTable>
             <DataTable key={amount}>{amount}</DataTable>
             <DataTable key={currency}>{currency}</DataTable>
-          </StringTransaction>
-        )}
+          </StringTransaction>)}
         </tbody>
       </TransactionTable>)
 }
