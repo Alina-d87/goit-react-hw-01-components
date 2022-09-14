@@ -32,5 +32,3 @@ FriendList.prototypes = {
     id: PropTypes.number.isRequired,
   })
 }
-
-//isOnline - буль, що сигналізує про стан друга: в мережі або ні.*/

@@ -11,16 +11,14 @@ import { ActivLabel } from "./Profile.styled"
 import { ActiveQuantity} from "./Profile.styled"
 
 export const Profile = ({username, tag, location, avatar, stats}) => {
-	return (<ProfileCard>
-		<div className="description">
-				<Avatar
-					src={avatar}
-					alt={username} />
+	return (
+		<ProfileCard>
+			<div className="description">
+				<Avatar src={avatar} alt={username} />
 				<UserName>{username}</UserName>
 				<Tag tag={tag} icon={BiAt} />
 				<UserInfo>{location}</UserInfo>
 			</div>
-
 			<ActivInfo>
 				<ElementInvo>
 					<ActivLabel>Followers</ActivLabel>
@@ -35,8 +33,7 @@ export const Profile = ({username, tag, location, avatar, stats}) => {
 					<ActiveQuantity>{stats.likes}</ActiveQuantity>
 				</ElementInvo>
 			</ActivInfo>
-		</ProfileCard>
-	);
+		</ProfileCard>);
 };
 
 Profile.propTypes = {

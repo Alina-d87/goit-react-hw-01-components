@@ -3,9 +3,9 @@ import { UserInfo } from "./Profile.styled"
 
 export const Tag = ({ icon: Icon, tag }) => {
 	return (
-			<UserInfo>
-		<Icon />{tag}
-			</UserInfo>)
+		<UserInfo>
+			<Icon />{tag}
+		</UserInfo>)
 }
 
 Tag.prototype = {

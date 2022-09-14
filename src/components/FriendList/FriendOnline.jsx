@@ -11,5 +11,5 @@ export const OnlineFriend = ({ icon: Icon, isOnline }) => {
 
 OnlineFriend.prototype = {
 	icon: PropTypes.element.isRequired,
-isOnline: PropTypes.bool.isRequired,
+	isOnline: PropTypes.bool.isRequired,
 }
