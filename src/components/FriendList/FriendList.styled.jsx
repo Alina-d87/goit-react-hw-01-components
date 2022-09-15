@@ -14,7 +14,7 @@ margin-bottom: 20px;
 padding-left: 0px;
 `
 
-export const OneFriends = styled.li`
+export const Friend = styled.li`
 display: flex;
 height: 100px;
 width: 400px;
