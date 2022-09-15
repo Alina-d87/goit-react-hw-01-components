@@ -47,10 +47,8 @@ display: block;
 text-align: center;
 font-size: 20px;
 font-weight: bold;
-
 `
 export const ActiveQuantity = styled.span`
 text-align: center;
 font-size: 20px;
-
 `

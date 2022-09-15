@@ -24,7 +24,7 @@ export const StringTransaction = styled.tr`
 height: 40px;
 font-size: 20px;
 color: grey;
-:nth-child(2n) {
+:nth-of-type(2n) {
 	background-color: LightBlue;
 }
 border: 1px solid grey;
